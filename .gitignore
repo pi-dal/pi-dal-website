@@ -1,0 +1,9 @@
+.DS_Store
+fabfile.py
+000*.py
+*.db
+*.pyc
+*.env
+/__pycache__
+/.idea
+

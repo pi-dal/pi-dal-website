@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+<title>{% block title %} pi-dal&tutorial-detail {% endblock %}</title>
+{% block content %}
+    <div class="banner_w3lspvt-2">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" class="font-weight-bold">主页面</a></li>
+            <li class="breadcrumb-item" aria-current="page">项目 & 打赏</li>
+        </ol>
+    </div>
+    <!-- //banner -->
+</div>
+<!-- //main banner -->
+
+<!-- price -->
+
+<div class="container">
+    <div class="row">
+        <h1 class="col-12 mt-4 mb-4">{{ tutorial.title }}</h1>
+        <div class="col-12 alert alert-success">作者：{{ tutorial.author }}</div>
+        <div class="col-12">
+            <p>{{ tutorial.text|safe }}</p>
+        </div>
+    </div>
+</div>
+<!-- //price -->
+<!-- //footer -->
+<!-- copyright bottom -->
+<div class="copy-bottom bg-li py-4 border-top">
+    <div class="container-fluid">
+        <div class="d-md-flex px-md-3 position-relative text-center">
+            <!-- footer social icons -->
+            <div class="social-icons-footer mb-md-0 mb-3">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-facebook"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-google-plus"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //footer social icons -->
+            <!-- copyright -->
+            <div class="copy_right mx-md-auto mb-md-0 mb-3">
+                <p class="text-bl let">Copyright &copy; 2019.Company name All rights reserved.More Templates <a
+                        href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a
+                        href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+                </p>
+            </div>
+            <!-- //copyright -->
+            <!-- move top icon -->
+            <a href="#home" class="move-top text-center">
+                <span class="fa fa-level-up" aria-hidden="true"></span>
+            </a>
+            <!-- //move top icon -->
+        </div>
+    </div>
+</div>
+<!-- //copyright bottom -->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+{% endblock %}

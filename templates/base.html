@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content=""/>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <script type="text/ecmascript">
+        /*改变原始宽度（0）*/
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /*恢复原始宽度0*/
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <style>
+        @charset "utf-8";
+        /* CSS Document */
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        /*侧边栏选择器*/
+        .sidenav {
+            height: 100%;
+            width: 0; /*原始宽度为0*/
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #7FFFAA;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        /*侧边栏选项选择器*/
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #FFFFFF;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /*侧栏标签和关闭按钮光标的效果*/
+        .sidenav a:hover, .offcanvas a:focus {
+            color: palegreen;
+        }
+
+        /*侧栏和关闭按钮的位置选择器*/
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/layer/2.1/layer.js"></script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pi-dal/cdn@1.0/css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pi-dal/cdn@1.0/css/style.css" type="text/css" media="all"/>
+    <!-- Style-CSS -->
+    <script src="https://use.fontawesome.com/59c2a956d8.js"></script>
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+          rel="stylesheet">
+    <!-- //Web-Fonts -->
+</head>
+
+<body>
+<!-- main banner -->
+<div class="main-top" id="home">
+    <!-- header -->
+    <header>
+        <div class="container-fluid">
+            <div class="header d-lg-flex justify-content-between align-items-center py-3 px-sm-3">
+                <!-- logo -->
+                <div id="logo">
+                    <h1><a href="/"><span class="fa fa-linode mr-2"></span>pi-dal</a></h1>
+                </div>
+                <!-- //logo -->
+                <!-- nav -->
+                <div class="nav_w3ls">
+                    <nav>
+                        <label for="drop" class="toggle">菜单</label>
+                        <input type="checkbox" id="drop"/>
+                        <ul class="menu">
+                            <li><a href="/" class="pi-dal">主页面</a></li>
+                            <li><a href="/about/">关于我</a></li>
+                            <li><a href="/tutorial/">教程</a></li>
+                            <li>
+                                <!-- First Tier Drop Down -->
+                                <label for="drop-2" class="toggle toogle-2">落下 <span class="fa fa-angle-down"
+                                                                                     aria-hidden="true"></span>
+                                </label>
+                                <a>落下 <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                <input type="checkbox" id="drop-2"/>
+                                <ul>
+                                    <li><a href="#services" class="drop-text">服务</a></li>
+                                    <li><a href="/pricing/">项目 & 打赏</a></li>
+                                    <li><a href="/faq/" class="drop-text">常见问题</a></li>
+                                    <li><a href="/havenot/" class="drop-text">404</a></li>
+                                    <li><a href="#stats" class="drop-text">统计</a></li>
+                                    <li><a href="/about/" class="drop-text">为什么关注我</a></li>
+                                    <li><a href="/about/" class="drop-text">我与同伴们</a></li>
+                                    <li><a href="#partners" class="drop-text">打赏者</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/contact/">联系我</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- //nav -->
+                <div class="d-flex mt-lg-1 mt-sm-2 mt-3 justify-content-center">
+                    <!-- search -->
+                    <div class="search-w3layouts mr-3">
+                        <form action="#" method="post" class="search-bottom-wthree d-flex">
+                            <input class="search" type="search" placeholder="Search Here..." required="">
+                            <button class="form-control btn" type="submit"><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+                    <!-- //search -->
+                    <!-- download -->
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a class="dropdown-item" href='{% url "index:logout" %}'>退出登录</a>
+                        <a class="dropdown-item" href='{% url "password_reset_recover" %}'>重置密码</a>
+                        <a class="dropdown-item" href="#" onclick="user_delete()">删除用户</a>
+                    </div>
+                    {% if user.is_authenticated %}
+                    <span style="font-size:30px; cursor:pointer" onclick="openNav()">{{ user.username }}</span>
+                    {% else %}
+                    <a class="dwn-w3ls btn" href="/login/" target="_blank">
+                        <span class="fa fa-user-circle"></span>
+                    </a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <form
+                            style="display:none;"
+                            id="user_delete"
+                            action="{% url 'index:delete' user.id %}"
+                            method="POST"
+                    >
+                        {% csrf_token %}
+                        <button type="submit">发送</button>
+                    </form>
+                    <script>
+                        function user_delete() {
+                            layer.open({
+                                title: "确认删除",
+                                content: "确认删除用户资料吗？",
+                                yes: function (index, layero) {
+                                    $('form#user_delete button').click();
+                                    layer.close(index);
+                                },
+                            })
+                        }
+                    </script>
+                    {% endif %}
+                    <!-- //download -->
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

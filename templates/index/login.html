@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+<title>{% block title %} pi-dal&登录 {% endblock %}</title>
+{% block content %}
+<div class="banner_w3lspvt-2">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" class="font-weight-bold">主页面</a></li>
+        <li class="breadcrumb-item" aria-current="page">登录</li>
+    </ol>
+</div>
+<!-- //banner -->
+</div>
+<!-- //main banner -->
+
+<!-- contact -->
+<div class="contact py-5" id="contact">
+    <div class="container pb-xl-5 pb-lg-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="https://cdn.jsdelivr.net/gh/pi-dal/cdn@1.0/images/b2.png" alt="image" class="img-fluid"/>
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-5">
+                <!-- contact form grid -->
+                <div class="contact-top1">
+                    <form action="#" method="post" class="contact-wthree-do">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="username">
+                                        用户名
+                                    </label>
+                                    <input class="form-control" type="text" placeholder="Anderson" name="username"
+                                           required id="username">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6 mt-md-0 mt-4">
+                                    <label for="password">
+                                        密码
+                                    </label>
+                                    <input class="form-control" type="password" placeholder="xxxxxxx"
+                                           name="password" required id="password">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h5>忘记密码了？</h5>
+                        <h5>点击<a href='{% url "password_reset_recover" %}'>这里</a>重置密码</h5>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-cont-w3 btn-block mt-4">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- //contact form grid ends here -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //contact-->
+
+<!-- map -->
+<div class="w3l-map p-4">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848295.9861393345!2d150.37152490226384!3d-33.846975938661174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney+NSW%2C+Australia!5e0!3m2!1sen!2sin!4v1515557909959"></iframe>
+</div>
+<!-- //map -->
+
+<!-- footer -->
+<!-- //footer -->
+<!-- copyright bottom -->
+<div class="copy-bottom bg-li py-4 border-top">
+    <div class="container-fluid">
+        <div class="d-md-flex px-md-3 position-relative text-center">
+            <!-- footer social icons -->
+            <div class="social-icons-footer mb-md-0 mb-3">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-facebook"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-google-plus"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //footer social icons -->
+            <!-- copyright -->
+            <div class="copy_right mx-md-auto mb-md-0 mb-3">
+                <p class="text-bl let">Copyright &copy; 2019.Company name All rights reserved.More Templates <a
+                        href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a
+                        href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+                </p>
+            </div>
+            <!-- //copyright -->
+            <!-- move top icon -->
+            <a href="#home" class="move-top text-center">
+                <span class="fa fa-level-up" aria-hidden="true"></span>
+            </a>
+            <!-- //move top icon -->
+        </div>
+    </div>
+</div>
+<!-- //copyright bottom -->
+{% endblock %}
